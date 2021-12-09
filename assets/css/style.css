@@ -1,0 +1,72 @@
+@font-face {
+	font-family: "Karla";
+	src: url(../font/Karla-Bold.ttf);
+}
+
+@font-face {
+	font-family: "Rubik";
+	src: url(../font/Rubik-Light.ttf);
+}
+
+body {
+	background-color: rgb(4, 157, 189);
+}
+
+.main {
+	position: absolute;
+	top: 20%;
+	transform: translate(0%, -20%);
+}
+
+.title {
+	margin-bottom: 100px;
+}
+
+#card {
+	overflow: hidden;
+	height: 10rem;
+}
+
+.button {
+	margin-top: 10px;
+	margin-bottom: 20px;
+}
+
+.button .btn {
+	font-family: "Karla";
+	color: white;
+	background-image: linear-gradient(to right, #3240a8, #9a32a8) !important;
+}
+
+.output {
+	margin-top: 10px;
+	border: none;
+	border-left: 3px solid black;
+}
+
+.output .card-body {
+	padding: 1px 10px;
+}
+
+.output .sub-title {
+	font-family: "Karla";
+	line-height: 10px;
+	font-size: 18px;
+}
+
+.output .content {
+	line-height: 9px;
+	font-family: "Rubik";
+	font-size: 15px;
+}
+
+#clear {
+	margin-top: 20px;
+	border-radius: 100%;
+	border: none;
+	font-size: 20px;
+	color: red;
+	background-color: transparent;
+}
+
+@media (min-width: 992px) {}
