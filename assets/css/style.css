@@ -1,72 +1,114 @@
-@font-face {
-	font-family: "Karla";
-	src: url(../font/Karla-Bold.ttf);
-}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
 
 @font-face {
-	font-family: "Rubik";
-	src: url(../font/Rubik-Light.ttf);
+    font-family: monospace;
+    src: url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+}
+.wrap{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #454545;
+}
+.sub-wrap{
+}
+.main{
+   
+}
+.title{
+    font-family: 'Bebas Neue', sans-serif;
+    color: white;
+    font-size: 50px;
 }
 
-body {
-	background-color: rgb(4, 157, 189);
+/*input form*/
+.verb-input{
+    display: block;
+    width: 100%;
+    height: 50px;
+    background-color: #222222;
+    border: 2px solid #fff;
+    border-bottom: 3px solid #fff;
+    color: white;
+    margin: 8px 0;
+    padding: 0px 20px;
+    border-radius: 10px;
+}
+.verb-input:focus{
+    border: 2px solid #fff;
+    outline: none;
+}
+.verb-input::placeholder{
+    padding: 0px 20px;
+    color: #858585
+}
+.verb-input:focus::placeholder{
+    font-size: 9px;
+    transition: 0.5s;
 }
 
-.main {
-	position: absolute;
-	top: 20%;
-	transform: translate(0%, -20%);
+/* submit button */
+.input-button{
+    background-color: #f8903b;
+    width: 100%;
+    height: 50px;
+    margin-top: 10px;
+    border-radius: 10px;
+    border: 2px solid #242424;
+    border-bottom: 5px solid #242424;
+}
+.input-button:hover{
+    background-color: #f8903bd5;
+}
+.input-button:active{
+    background-color: #f8903bd5;
+    border: 2px solid #242424;
+    border-bottom: 3px solid #242424;
+}
+/* card */
+.output{
+    margin-top: -10px;
+}
+.card{
+    display: block;
+    height: 1px;
+    overflow-y: hidden;
+    background-color: #202020;
+    border: 1px solid #ffffffab;
+}
+.output-verb-text{
+    margin-left: 20px;
+    font-family: monospace;
+}
+.output-verb-text h3{
+    color: #ffffffe5;
+    font-size: 15px;
+    font-weight: bold;
+}
+.output-verb-text p{
+    color: #ffffffe5;
+}
+.output-verb{
+   margin-top: 10px;
 }
 
-.title {
-	margin-bottom: 100px;
+.alert{
+    color: #ff8383 ;
+    font-family: monospace;
+    font-style: italic;
+    font-size: 10px;
+    padding: 0px;
 }
+@media (min-width: 992px) {
 
-#card {
-	overflow: hidden;
-	height: 10rem;
+    .output-verb-text h3{
+        font-size: 23px;
+    }
+    .alert{
+        font-size: 15px;
+    }
+
 }
-
-.button {
-	margin-top: 10px;
-	margin-bottom: 20px;
-}
-
-.button .btn {
-	font-family: "Karla";
-	color: white;
-	background-image: linear-gradient(to right, #3240a8, #9a32a8) !important;
-}
-
-.output {
-	margin-top: 10px;
-	border: none;
-	border-left: 3px solid black;
-}
-
-.output .card-body {
-	padding: 1px 10px;
-}
-
-.output .sub-title {
-	font-family: "Karla";
-	line-height: 10px;
-	font-size: 18px;
-}
-
-.output .content {
-	line-height: 9px;
-	font-family: "Rubik";
-	font-size: 15px;
-}
-
-#clear {
-	margin-top: 20px;
-	border-radius: 100%;
-	border: none;
-	font-size: 20px;
-	color: red;
-	background-color: transparent;
-}
-
-@media (min-width: 992px) {}

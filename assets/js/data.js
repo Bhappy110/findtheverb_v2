@@ -1,29 +1,35 @@
+var input = document.getElementById("txt1");
+var info = document.getElementById("alert-text");
+var button = document.getElementById("submit");
 
+input.addEventListener("input", function(){
+	var inputLength = input.value.length;
 
-function check_verb() { 
-
-//animation
-var verb1 = document.getElementById('txt1');
-
-var card = document.getElementById('card');
-var vLength = verb1.value.length;
-
-	if (vLength != 0) {
-
-		card.style.height = "26rem";
-		card.style.transition = "1s";
-
+	if ( inputLength > 0 ){
+		info.innerHTML = "Click Submit Button";
+		info.style.color = "#9cff83";
 	}else {
-
-		card.style.height = "10rem"
+		info.innerHTML = "*enter verb 1 to the column";
+		info.style.color = "#ff8383"; 
+	}
+})
+function check_verb() { 
+// function untuk animasi card output
+var card = document.getElementById("card");
+var inputLength = input.value.length;
+	if (inputLength > 0){
+		card.style.height = "100px";
 		card.style.transition = "1s";
-
+	}else {
+		card.style.height = "1px";
+		card.style.transition = "1s";
 	}
 
-// data verb
 var a = document.getElementById("txt1").value.toLowerCase();  
 var p_kontainer = document.getElementById("verb3");
-var q_kontainer = document.getElementById("verb2"); 
+var q_kontainer = document.getElementById("verb2");
+var card = document.getElementById("card");
+// data verb
 switch (a) 
  { 
     case'abash':
@@ -1554,8 +1560,8 @@ switch (a)
 	default:
 		p_kontainer.innerHTML = "none";
 		q_kontainer.innerHTML = "none";
-		alert("kata tidak ditemukan");
-		card.style.height = "10rem"
+		alert("cannot find verb");
+		card.style.height = "1px"
 		card.style.transition = "1s"; 
 		break;
 	} 
